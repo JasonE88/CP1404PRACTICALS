@@ -17,7 +17,7 @@ def get_data():
     subject_data = []
     for line in input_file:
         line = line.strip()
-        parts = line.split(',') # See what a line really looks like
+        parts = line.split(',')
         parts[2] = int(parts[2])
         subject_data.append(parts)
 
