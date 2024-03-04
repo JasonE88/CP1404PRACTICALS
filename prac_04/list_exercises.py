@@ -1,5 +1,6 @@
 # Basic list operations
 def main():
+    """Prompts the user for 5 numbers and provides information about them."""
     numbers = []
     for i in range(5):
         number = float(input("Number: "))
@@ -18,6 +19,7 @@ main()
 
 
 def main():
+    """Checks user access based on input username."""
     usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
                  'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
 
