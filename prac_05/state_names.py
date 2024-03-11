@@ -14,6 +14,9 @@ CODE_TO_NAME = {
     "TAS": "Tasmania"
 }
 print(CODE_TO_NAME)
+max_length = max(len(code) for code in CODE_TO_NAME.keys())
+for code, name in CODE_TO_NAME.items():
+    print(f"{code}{' ' * (max_length - len(code))} is {name}")
 
 state_code = input("Enter short state: ").upper()
 while state_code != "":
