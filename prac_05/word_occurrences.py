@@ -6,11 +6,13 @@ Actual:   45 minutes
 
 
 def main():
+    """Ask the user for a string and count the occurrences of each word in the string."""
     text = input("Text: ")
     count_word_occurrences(text)
 
 
 def count_word_occurrences(text):
+    """Count the occurrences of each word in the given text and print them."""
     words = text.split()
     word_counts = {}
     max_word_length = 0
