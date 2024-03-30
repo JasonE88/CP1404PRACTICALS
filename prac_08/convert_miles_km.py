@@ -20,25 +20,24 @@ class MilesConverterApp(App):
         miles = self.convert_to_number(text)
         self.update_result(miles)
 
-    def handle_increment(self, text, change):
-        """Handle up/down button press, update the text input with new value, call calculation function."""
-        print("handle increment")
-        miles = self.convert_to_number(text) + change
+    def handle_increment(self, value):
+        """Handle Up/Down button press to adjust miles number."""
+        miles = self.convert_to_number(self.root.ids.input_miles.text) + value
         self.root.ids.input_miles.text = str(miles)
-        # Since the InputText.text has changed, its on_text event will fire and handle_calculate will be called
+        self.update_result(miles)
 
     def update_result(self, miles):
-        print("update")
+        """Update the output label with the conversion result."""
         self.output_km = str(miles * FACTOR_MILES_TO_KM)
 
     @staticmethod
     def convert_to_number(text):
-        """Convert text to float or 0.0 if invalid."""
+        """Convert text to float or return 0.0 if invalid."""
         try:
             return float(text)
         except ValueError:
             return 0.0
 
 
-MilesConverterApp().run()
-
+if __name__ == "__main__":
+    MilesConverterApp().run()
