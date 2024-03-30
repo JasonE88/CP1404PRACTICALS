@@ -1,0 +1,9 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: input_miles
+            font_size: 48
+            on_text: app.handle_calculate(self.text)
+
