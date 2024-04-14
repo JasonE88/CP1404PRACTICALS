@@ -10,7 +10,6 @@ def main():
 
     print(my_taxi)
 
-
     print(my_taxi.get_fare())
 
 
