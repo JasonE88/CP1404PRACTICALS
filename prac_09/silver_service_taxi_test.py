@@ -2,14 +2,16 @@ from prac_09.silver_service_taxi import SilverServiceTaxi
 
 
 def main():
-    """Test the SilverServiceTaxi."""
-    my_taxi = SilverServiceTaxi("Hummer", 200, 4.92, 4)
+    """Test the SilverServiceTaxi class."""
 
-    my_taxi.start_fare()
+    my_taxi = SilverServiceTaxi("Silver Bird", 100, 2)
+
     my_taxi.drive(18)
 
     print(my_taxi)
-    print("Fare: ${:.2f}".format(my_taxi.get_fare()))
+
+
+    print(my_taxi.get_fare())
 
 
 main()
