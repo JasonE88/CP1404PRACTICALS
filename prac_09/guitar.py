@@ -4,7 +4,8 @@ Guitar class
 """
 # Note: It would be better to get the current year from the system clock
 # and you might like to do that: lookup the "datetime" module
-CURRENT_YEAR = 2022
+# CURRENT_YEAR = 2022
+import datetime
 VINTAGE_AGE = 50
 
 
@@ -27,7 +28,8 @@ class Guitar:
 
     def get_age(self):
         """Get the age of a guitar based on the CURRENT_YEAR."""
-        return CURRENT_YEAR - self.year
+        current_year = datetime.datetime.now().year
+        return current_year - self.year
 
     def is_vintage(self):
         """Determine if a Guitar is considered vintage or not based on age."""
