@@ -18,17 +18,3 @@ class SilverServiceTaxi(Taxi):
     def get_fare(self):
         """Get the current fare."""
         return self.flagfall + super().get_fare()
-
-"""
-Inheriting Enhancements
-class Taxi(Car):
-    #Represent a Taxi object
-
-    price_per_km = 1.23
-    flagfall = 4.50
-
-    def get_fare(self):
-        #Return the price for the taxi trip, rounded to the nearest 10 cents.
-        fare = super().get_fare() + self.flagfall
-        return round(fare, 1)
-"""
