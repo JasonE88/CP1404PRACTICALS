@@ -20,7 +20,9 @@ def main():
     print("band (str)")
     print(band)
     print("band.play()")
-    print(band.play())
+    # print(band.play())
+    for status in band.play():
+        print(status)  # so output will look like the one in github
 
 
 main()
